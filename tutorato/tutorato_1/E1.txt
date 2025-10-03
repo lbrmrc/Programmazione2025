@@ -1,0 +1,8 @@
+cd $HOME
+mkdir Tutorato
+mkdir Tutorato/Tutorato_1
+touch Tutorato/Tutorato_1/hello.c
+cd Tutorato/Tutorato_1
+code .
+gcc -o saluto hello.c
+./saluto 
