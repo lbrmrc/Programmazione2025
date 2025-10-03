@@ -1,0 +1,6 @@
+cd $HOME
+cd Tutorato/Tutorato_1
+touch ore.c
+code .
+gcc -o ore_in_decennio E4_ore.c
+./ore_in_decennio 

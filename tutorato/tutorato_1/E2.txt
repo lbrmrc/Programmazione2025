@@ -1,0 +1,6 @@
+cd $HOME
+cd Tutorato/Tutorato_1
+touch minuti.c
+code .
+gcc -o minuti_in_anno E2_minuti.c
+./minuti_in_anno 

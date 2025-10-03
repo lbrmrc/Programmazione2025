@@ -1,0 +1,8 @@
+cd $HOME
+cd Tutorato/Tutorato_1
+mkdir copie
+cp *.c ./copie
+cd copie
+ls -l
+chmod o-rwx *.c
+ls -l

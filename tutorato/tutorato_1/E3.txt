@@ -1,0 +1,6 @@
+cd $HOME
+cd Tutorato/Tutorato_1
+touch espressione.c
+code .
+gcc -o valuta_espressione E3_espressione.c
+./valuta_espressione

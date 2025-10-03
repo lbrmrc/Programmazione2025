@@ -1,0 +1,6 @@
+cd $HOME
+cd Tutorato/Tutorato_1
+touch secondi.c
+code .
+gcc -o secondi_in_settimana E5_secondi.c
+./secondi_in_settimana
