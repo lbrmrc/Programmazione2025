@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// 3, 2, 5
 int main() {
   int a; // accumulatore
   int b;
