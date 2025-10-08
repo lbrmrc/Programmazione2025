@@ -7,4 +7,4 @@ int main() {
     printf("Compreso\n");
   else
     printf("Non compreso\n");
-  }
+}
