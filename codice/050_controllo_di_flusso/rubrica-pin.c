@@ -5,6 +5,7 @@ int main() {
   scanf("%d", &pin);
   if (pin == 44122)
     printf("Accesso consentito\n");
+  else
     printf("1. Tizio 335-1234567\n");
     printf("2. Caio 347-1234567\n");
     printf("Scegliere un contatto\n");
