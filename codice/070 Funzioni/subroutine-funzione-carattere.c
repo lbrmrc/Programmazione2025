@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void stampa_carattere(char carattere) {
-   printf("%c", carattere); 
+void stampa_carattere(char c) {
+   printf("%c", c); 
 }
 
 void logo(char carattere) {

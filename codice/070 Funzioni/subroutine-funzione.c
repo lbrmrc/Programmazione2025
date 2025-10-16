@@ -17,5 +17,4 @@ int main() {
   printf("Chiamata del contatto %d in corso\n", scelta);
 
   printf("Fine\n");
-  return 0;
 }
