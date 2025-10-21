@@ -6,4 +6,6 @@ int main() {
 
     pa = &a;
     printf("%d\n", *pa);
+    *pa = 3;
+    printf("%d\n", a);
 }
