@@ -23,10 +23,15 @@ int primo(int n) {
 
 int main() {
   int n; // input
-
+  int i;
   scanf("%d", &n);
-  if (primo(n))
-    printf("%d è primo\n", n);
-  else
-    printf("%d non è primo\n", n);
+  for (i = 1; i <= n; i++) {
+    // i prende i valori [1, 2, ...n]
+    if (primo(i)){
+        // i prende i valori filter(primo, [1, 2, ..., n])
+        // cioè i valori primi compresi fra 1 e n;
+        printf("%d\n", i);
+    }
+     
+  }
 }
