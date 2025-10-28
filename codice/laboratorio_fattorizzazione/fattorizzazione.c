@@ -29,15 +29,28 @@ int primo(int n) {
 int main() {
   int n; // numero richiesto all'utente
   int i; // elemento di [1 ... n]
+  int q;
+  int esponente;
   scanf("%d", &n);
+  q = n;
   for (i = 1; i <= n; i++) {
     // i prende valori da [1..n]
     if (n % i == 0) {
       // i prende valori da filter(divide n, [1..n])
       if (primo(i)) {
+        printf("%d", i);
+        esponente = 0;
         // i prende i valori divisori primi di n;
-        printf("%d\n", i);
+        while (q % i == 0) {
+          esponente++;
+          q = q / i;
+        };
+        if (esponente > 1)
+          printf("^%d", esponente);
+        if (q > 1)
+          printf(" x ");
       }
     }
   }
+  printf("\n");
 }

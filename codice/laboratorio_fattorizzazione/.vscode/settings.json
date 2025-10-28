@@ -1,6 +1,7 @@
 {
     "files.associations": {
         ".fantomasignore": "ignore",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "random": "c"
     }
 }
