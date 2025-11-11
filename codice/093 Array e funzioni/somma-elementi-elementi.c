@@ -1,10 +1,11 @@
 #include <stdio.h>
 #define DIM 5
 
-int somma(int v[DIM]) {
+int somma(int *v, int dl) {
   int i, s = 0;
-  for (i = 0; i < DIM; i++)
-    s += v[i];
+  for (i = 0; i < dl; i++){
+    s += *(v+i);
+    *(v+i) = 0;}
   return s;
 }
 
@@ -13,5 +14,5 @@ int main(void) {
   printf("%d\n", sizeof(a));
   printf("%d\n", sizeof(a)/sizeof(int));
 
-  printf("%d\n", somma(a)); // stampa 18
+  printf("%d\n", somma(a, 5)); // stampa 18
 }
