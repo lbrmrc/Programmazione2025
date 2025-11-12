@@ -5,17 +5,21 @@
 
 #define DIM 80
 
-int main() {
-  char s1[DIM];
-  char s2[DIM];
+void copia(char *s2, char *s1){
   int i;
-  printf("Inserisci la prima stringa\n");
-  scanf("%s", s1);
   i = 0;
   while (s1[i] != '\0') {
     s2[i] = s1[i];
     i++;
   }
   s2[i] = '\0';
-  printf("%s\n", s2);
+}
+
+int main() {
+  char sorgente[DIM];
+  char destinazione[DIM];
+  printf("Inserisci la prima stringa\n");
+  scanf("%s", sorgente);
+  copia(destinazione, sorgente);
+  printf("%s\n", destinazione);
 }

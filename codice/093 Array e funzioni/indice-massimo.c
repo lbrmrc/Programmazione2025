@@ -7,7 +7,7 @@ void input_array(int a[], int dl){
         scanf("%d", &a[i]);
 }
 
-int indice_massimo(int *v, int dl){
+int indice_massimo(int v[], int dl){
     int m = 0;
     int i;
     for (i = 1; i < dl; i++)
