@@ -1,0 +1,4 @@
+total 24
+-rwxr-xr-x 1 marco marco 16984 13 nov 14.17 a.out
+-rw-r--r-- 1 marco marco     0 13 nov 14.19 output.txt
+-rw-r--r-- 1 marco marco   215 13 nov 14.17 stampa_array.c
