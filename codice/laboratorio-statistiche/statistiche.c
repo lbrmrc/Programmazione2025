@@ -47,7 +47,7 @@ int somma(int a[], int dl) {
 
 float media(int a[], int dl) { return (float)somma(a, dl) / dl; }
 
-void numeri_frequenti(int a[], int dl) {
+int numeri_frequenti(int a[], int dl, int pd[], int *pdlpf) {
   int i, j;
   int numeri[DIM];
   int frequenze[DIM];
@@ -67,17 +67,24 @@ void numeri_frequenti(int a[], int dl) {
     }
   }
   frequenza_massima = massimo(frequenze, dlnf);
-  printf("\nNumeri più frequenti (%d occorrenze):\n", frequenza_massima);
+  *pdlpf = 0;
   for (j = 0; j < dlnf; j++)
-    if (frequenze[j] == frequenza_massima)
-        printf("%d\n", numeri[j]);
+    if (frequenze[j] == frequenza_massima) {
+      pd[*pdlpf] = numeri[j];
+      (*pdlpf)++;
+    }
+  return frequenza_massima;
 }
 
 int main() {
   int a[DIM], dl;
+  int pf[DIM], dlpf, fm, i;
   dl = leggi_valori(a);
   printf("Minimo: %d\n", minimo(a, dl));
   printf("Massimo: %d\n", massimo(a, dl));
   printf("Media: %.2f\n", media(a, dl));
-  numeri_frequenti(a, dl);
+  fm = numeri_frequenti(a, dl, pf, &dlpf);
+  printf("Numeri più frequenti (%d occorrenze)\n", fm);
+  for (i = 0; i < dlpf; i++)
+    printf("%d\n", pf[i]);
 }
