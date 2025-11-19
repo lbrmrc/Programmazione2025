@@ -1,1 +1,1 @@
-char f(char x);
+char f(char y);

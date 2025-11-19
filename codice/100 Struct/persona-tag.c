@@ -2,17 +2,13 @@
 #include <string.h>
 
 int main() {
-  struct {
+  struct persona { // etichetta (tag)
     char nome[30];
     int eta;
     float stipendio;
   } giovanni;
 
-  struct {
-    char nome[30];
-    int eta;
-    float stipendio;
-  } maria;
+  struct persona maria;
 
   strcpy(giovanni.nome, "Giovanni Rossi");
   giovanni.eta = 45;

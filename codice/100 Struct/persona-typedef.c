@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-  struct {
-    char nome[30];
-    int eta;
-    float stipendio;
-  } giovanni;
+typedef struct {
+  char nome[30];
+  int eta;
+  float stipendio;
+} Persona;
 
-  struct {
-    char nome[30];
-    int eta;
-    float stipendio;
-  } maria;
+typedef int Intero;
+
+int main() {
+
+  Persona giovanni;
+  Persona maria;
+  Persona classe[100];
+
+  Intero i = 15;
 
   strcpy(giovanni.nome, "Giovanni Rossi");
   giovanni.eta = 45;
