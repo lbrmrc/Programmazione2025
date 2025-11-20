@@ -19,9 +19,10 @@ int main() {
   printf("\n");
   stampaFrazionaria(differenza(f1,f2));
   printf("\n");
-  stampaFrazionaria(f1); // stampa 2/3
+  stampaFrazionaria(prodotto(f1,f2)); // stampa 3/10
   printf("\n");
-  stampaDecimale(f1); // stampa 0.66666...
+  stampaFrazionaria(quoziente(f1,f2)); // stampa 6/5
   printf("\n");
-
+  stampaDecimale(f1);
+  printf("\n");
 }

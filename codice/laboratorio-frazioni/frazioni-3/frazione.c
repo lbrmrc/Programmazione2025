@@ -25,7 +25,7 @@ int mcd(int a, int b) {
 Frazione frazione(int n, int d) { // "costruttore"
   Frazione f;
   int divisore;
-  if (d < 0){
+  if (d < 0) {
     n = -n;
     d = -d;
   }
@@ -57,14 +57,19 @@ Frazione inputFrazione(void) {
 
 // --- funzioni aritmetiche
 
-Frazione opposto(Frazione f){
-  return frazione(-num(f), den(f));
-}
+Frazione opposto(Frazione f) { return frazione(-num(f), den(f)); }
+Frazione inverso(Frazione f) { return frazione(den(f), num(f)); }
 
 Frazione somma(Frazione f1, Frazione f2) {
   return frazione(num(f1) * den(f2) + num(f2) * den(f1), den(f1) * den(f2));
 }
 
-Frazione differenza(Frazione f1, Frazione f2) {
-  return somma(f1, opposto(f2));
+Frazione differenza(Frazione f1, Frazione f2) { return somma(f1, opposto(f2)); }
+
+Frazione prodotto(Frazione f1, Frazione f2) {
+  return frazione(num(f1) * num(f2), den(f1) * den(f2));
+}
+
+Frazione quoziente(Frazione f1, Frazione f2) {
+  return prodotto(f1, inverso(f2));
 }
