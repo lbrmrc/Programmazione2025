@@ -9,3 +9,6 @@ Frazione frazione(int n, int d);
 void stampaFrazionaria(Frazione f);
 void stampaDecimale(Frazione f);
 Frazione inputFrazione(void);
+Frazione opposto(Frazione f);
+Frazione somma(Frazione f1, Frazione f2);
+Frazione differenza(Frazione f1, Frazione f2);
