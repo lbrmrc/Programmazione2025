@@ -1,20 +1,22 @@
-typedef enum {Quadrato, Rettangolo} TipoFigura;
+typedef enum { Quadrato, Rettangolo } TipoFigura;
 
 typedef struct {
-    float lato;
+  float lato;
 } DatiQuadrato;
 
 typedef struct {
-    float base;
-    float altezza;
+  float base;
+  float altezza;
 } DatiRettangolo;
 
+typedef union {
+  DatiQuadrato datiQuadrato;
+  DatiRettangolo datiRettangolo;
+} DatiFigura;
+
 typedef struct {
- TipoFigura tipo;
- union{
-    DatiQuadrato datiQuadrato;
-    DatiRettangolo datiRettangolo;
- } dati;
+  TipoFigura tipo;
+  DatiFigura dati;
 } Figura;
 
 float area(Figura f);
