@@ -2,6 +2,22 @@
 #include <stdlib.h>
 #define DIM 100
 
+void inizializza(int m[][DIM], int dl) {
+  int i, j;
+  for (i = 0; i < dl; i++)
+    for (j = 0; j < dl; j++)
+      m[i][j] = i == j;
+}
+
+void stampa(int m[][DIM], int dl) {
+  int i, j;
+  for (i = 0; i < dl; i++) {
+    for (j = 0; j < dl; j++)
+      printf("%d ", m[i][j]);
+    printf("\n");
+  }
+}
+
 int main(int argc, char *argv[]) {
   int m[DIM][DIM];
   int i, j;
@@ -23,13 +39,7 @@ int main(int argc, char *argv[]) {
 
   //   int m[dl][dl]; // non standard C89
 
-  for (i = 0; i < dl; i++)
-    for (j = 0; j < dl; j++)
-      m[i][j] = i == j;
+  inizializza(m, dl);
 
-  for (i = 0; i < dl; i++) {
-    for (j = 0; j < dl; j++)
-      printf("%d ", m[i][j]);
-    printf("\n");
-  }
+  stampa(m, dl);
 }
