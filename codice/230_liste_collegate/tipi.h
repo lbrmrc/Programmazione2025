@@ -1,4 +1,5 @@
-typedef int Dato;
+typedef int Dato; // tipo elemento
+
 typedef struct nodo {
   Dato dato;
   struct nodo* next;
