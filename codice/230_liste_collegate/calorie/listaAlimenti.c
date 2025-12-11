@@ -1,24 +1,38 @@
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "listaAlimenti.h"
 
-
 // definizione
-void nuovaLista(Lista *pl) { pl->n_elementi = 0; }
+void nuovaLista(Lista *pl) { *pl = NULL; }
 
-void insCoda(Lista *pl, Cibo r) {
-  pl->dati[pl->n_elementi] = r;
-  pl->n_elementi++;
+void insTesta(Lista *pl, Cibo d) {
+  Nodo *aux = (Nodo *)malloc(sizeof(Nodo));
+  if (aux == NULL) {
+    printf("Errore allocazione memoria\n");
+    exit(100);
+  }
+  aux->dato = d;
+  aux->next = *pl;
+  *pl = aux;
+}
+
+void insCoda(Lista *pl, Cibo d) {
+  while(*pl != NULL)
+    pl = &(*pl)->next;
+ 
+  insTesta(pl, d);
 }
 
 float calorie100(Lista l, char nome[]) {
-  int i;
-  for (i = 0; i < l.n_elementi; i++) {
-    if (strcmp(l.dati[i].nome, nome) == 0) // trovato il cibo
-      return l.dati[i].calorie;
+  while (l!= NULL){
+    // l->dato è la testa della lista
+    if (strcmp(l->dato.nome, nome) == 0)
+      return l->dato.calorie;
+    l = l->next;
   }
+  
   printf("Cibo non trovato: %s\n", nome);
   exit(4);
 }

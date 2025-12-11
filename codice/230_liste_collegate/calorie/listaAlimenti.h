@@ -5,13 +5,15 @@ typedef struct {
   float calorie;
 } Cibo;
 
-typedef struct {
-  int n_elementi;
-  Cibo dati[DIM];
-} Lista;
+typedef struct nodo {
+  Cibo dato;
+  struct nodo *next;
+} Nodo;
+
+typedef Nodo *Lista;
 
 void nuovaLista(Lista *pl); // dichiarazione
 
 void insCoda(Lista *pl, Cibo r);
 
-float calorie100(Lista l, char nome[]);
+float calorie100(Lista l, char nome[]); // numero di calorie per 100 grammi del parametro
