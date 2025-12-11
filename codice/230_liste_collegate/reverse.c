@@ -28,18 +28,22 @@ void stampa(Lista l) {
   printf("\n");
 }
 
-Lista arrayToList(int a[], int dl) {
-  Lista l = NULL;
-  int i;
-  for (i = dl - 1; i >= 0; i--) {
-    insTesta(&l, a[i]);
+void reverse(Lista l1, Lista *pl2) {
+  *pl2 = NULL;
+  while (l1 != NULL) {
+    insTesta(pl2, l1->dato);
+    l1 = l1->next;
   }
-  return l;
 }
 
 int main() {
-  int a[] = {2, 4, 0, 3, 5};
-  Lista l;
-  l = arrayToList(a, 5);
-  stampa(l);
+  Lista l1, l2;
+  l1 = NULL; //[2,0,4,3];
+  insTesta(&l1, 3);
+  insTesta(&l1, 4);
+  insTesta(&l1, 0);
+  insTesta(&l1, 2);
+  stampa(l1);
+  reverse(l1, &l2);
+  stampa(l2); // [3,4,0,2]
 }
