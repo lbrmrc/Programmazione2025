@@ -3,7 +3,7 @@ typedef struct {
   int anno;
   char cf[17];
   float consumo;
-} Record;
+} Record; // elemento del file
 
 typedef struct {
   char cf[17];
